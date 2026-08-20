@@ -1,0 +1,25 @@
+{
+    "recommendations": [
+        // material file icon theme
+        "pkief.material-icon-theme",
+        // Integrates ESLint JavaScript into VS Code.
+        "dbaeumer.vscode-eslint",
+        // spell checker
+        "streetsidesoftware.code-spell-checker",
+        // formatter
+        "esbenp.prettier-vscode",
+        // visible indent
+        "oderwat.indent-rainbow",
+        // auto tag rename
+        "formulahendry.auto-rename-tag",
+        // markdown edit
+        "yzhang.markdown-all-in-one",
+        // markdown enhance
+        "shd101wyy.markdown-preview-enhanced",
+        // zenkaku highlight
+        "mosapride.zenkaku"
+    ],
+    "unwantedRecommendations": [
+        // not recommend extenstions if necessary
+    ]
+}
