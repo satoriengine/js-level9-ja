@@ -17,17 +17,7 @@ Bob
 20
 */
 
-const user = { name: 'Bob', age: 20 };
-
-const handler = {
-    get: function (target, propertyName) {
-        // ログを表示してから、target[propertyName]を返す
-        console.log(`[LOG] ${propertyName}を読み取りました`);
-        return target[propertyName];
-    },
-};
-
-const userProxy = new Proxy(user, handler);
+// 以下の部分に処理を作成してください
 
 // 以降の部分は変更してはいけません
 console.log(userProxy.name);

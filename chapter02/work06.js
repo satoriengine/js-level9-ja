@@ -6,18 +6,6 @@ function createHeavyResource() {
     return { id: 'heavy-001' };
 }
 
-let realResource = null;
-
-const handler = {
-    get: function (target, propertyName) {
-        // 初めてアクセスされたときだけ、実際のリソースを生成する
-        if (!realResource) {
-            realResource = createHeavyResource();
-        }
-        return realResource[propertyName];
-    },
-};
-
 // まだ何も生成されていない空のオブジェクトに対してProxyを作る
 const resourceProxy = new Proxy({}, handler);
 

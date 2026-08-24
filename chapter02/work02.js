@@ -6,18 +6,6 @@ const bankAccount = {
 };
 
 // bankAccountの代わりにアクセスを受け付ける「代理」オブジェクト
-const bankAccountProxy = {
-    setBalance: function (value) {
-        if (value < 0) {
-            console.log('エラー：残高をマイナスにはできません');
-            return;
-        }
-        bankAccount.balance = value;
-    },
-    getBalance: function () {
-        return bankAccount.balance;
-    },
-};
 
 bankAccountProxy.setBalance(-500); // エラー：残高をマイナスにはできません
 console.log(bankAccountProxy.getBalance()); // 1000（変更されていない）

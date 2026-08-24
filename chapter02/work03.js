@@ -6,9 +6,6 @@ const bankAccount = {
 };
 
 // JavaScriptには、Proxyパターンをそのまま言語機能として使えるProxyオブジェクトがある
-const handler = {};
-
-const bankAccountProxy = new Proxy(bankAccount, handler);
 
 console.log(bankAccountProxy.balance); // 1000
 

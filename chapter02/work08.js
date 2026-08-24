@@ -16,17 +16,7 @@ light
 light
 */
 
-const config = { theme: 'light' };
-
-const handler = {
-    set: function (target, propertyName, value) {
-        // 書き込みを拒否するメッセージを表示し、trueを返す
-        console.log('エラー：読み取り専用です');
-        return true;
-    },
-};
-
-const configProxy = new Proxy(config, handler);
+// 以下の部分に処理を作成してください
 
 // 以降の部分は変更してはいけません
 console.log(configProxy.theme);
