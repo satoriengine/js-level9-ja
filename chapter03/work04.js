@@ -36,20 +36,6 @@ const player = {
 };
 
 // 「観る」と「終わる」の両方をまとめたファサード
-const homeTheaterFacade = {
-    watchMovie: function (movie) {
-        projector.turnOn();
-        screen.lower();
-        audioSystem.setVolume(20);
-        player.play(movie);
-    },
-    endMovie: function () {
-        player.stop();
-        audioSystem.mute();
-        screen.raise();
-        projector.turnOff();
-    },
-};
 
 // 「観る」と「終わる」、それぞれで異なる順序の複数サブシステム操作が必要だが、
 // ファサードのおかげで呼び出す側は2つのメソッドを呼ぶだけでよい

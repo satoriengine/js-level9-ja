@@ -14,8 +14,7 @@ const newPlayer = {
 // ファサードの中身だけを新しいプレイヤーに差し替える
 const homeTheaterFacade = {
     watchMovie: function (movie) {
-        // oldPlayer.play(movie); // 旧プレイヤーを使っていた場合
-        newPlayer.startPlayback(movie); // 新プレイヤーに差し替えた
+        oldPlayer.play(movie); // 旧プレイヤーを使っていた場合
     },
 };
 

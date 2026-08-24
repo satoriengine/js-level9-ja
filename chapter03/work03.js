@@ -24,14 +24,6 @@ const player = {
 };
 
 // 4つのサブシステムをまとめて操作する、シンプルな窓口オブジェクト
-const homeTheaterFacade = {
-    watchMovie: function (movie) {
-        projector.turnOn();
-        screen.lower();
-        audioSystem.setVolume(20);
-        player.play(movie);
-    },
-};
 
 // homeTheaterFacadeという「窓口」を経由することで、
 // 呼び出す側は個々のサブシステムの存在すら意識しなくてよくなる

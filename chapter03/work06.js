@@ -15,16 +15,6 @@ const projector = {
 };
 
 // エラーが起きた場合の処理も、ファサードの中にまとめておく
-const homeTheaterFacade = {
-    watchMovie: function (movie) {
-        try {
-            projector.turnOn();
-            player.play(movie);
-        } catch (error) {
-            console.log(`再生できませんでした: ${error.message}`);
-        }
-    },
-};
 
 // movieを指定するので正しく動作する
 homeTheaterFacade.watchMovie('ラブストーリー');

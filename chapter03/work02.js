@@ -24,12 +24,5 @@ const player = {
 };
 
 // 4つの操作をまとめて行う、窓口となる関数
-function watchMovie(movie) {
-    projector.turnOn();
-    screen.lower();
-    audioSystem.setVolume(20);
-    player.play(movie);
-}
 
 // 呼び出す側は、watchMovieという1つの関数を呼ぶだけでよくなった
-watchMovie('アクション映画');
