@@ -2,23 +2,6 @@
 
 // 1つのeventBusだけで、"temperature"と"stock"という
 // 異なる種類の通知を、混ざらずに扱えるようになった
-const eventBus = {
-    channels: {},
-    subscribe: function (topic, fn) {
-        if (!this.channels[topic]) {
-            this.channels[topic] = [];
-        }
-        this.channels[topic].push(fn);
-    },
-    publish: function (topic, data) {
-        if (!this.channels[topic]) {
-            return;
-        }
-        this.channels[topic].forEach(function (fn) {
-            fn(data);
-        });
-    },
-};
 
 eventBus.subscribe('temperature', function (data) {
     console.log(`温度チャンネル: ${data}度`);

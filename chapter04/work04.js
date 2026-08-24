@@ -12,18 +12,9 @@ const eventBus = {
 };
 
 // Publisher（発行者）：温度を計測して発行するだけの関数
-function measureTemperature(value) {
-    console.log(`計測しました: ${value}度`);
-    // 発行するだけで、誰が受け取るかは一切知らない
-    eventBus.publish(value);
-}
 
 // Subscriber（購読者）は、Publisherとは無関係な場所で登録される
-eventBus.subscribe(function (temperature) {
-    console.log(`[表示] ${temperature}度です`);
-});
 
-measureTemperature(30);
 // 計測しました: 30度
 // [表示] 30度です
 

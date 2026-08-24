@@ -4,21 +4,5 @@
 // eventBusという1つの仲介者を、どんな通知にも使い回せる
 
 // すべての通知を1箇所で管理する、仲介者（EventBus）
-const eventBus = {
-    subscribers: [],
-    subscribe: function (fn) {
-        this.subscribers.push(fn);
-    },
-    publish: function (data) {
-        this.subscribers.forEach(function (fn) {
-            fn(data);
-        });
-    },
-};
 
-eventBus.subscribe(function (data) {
-    console.log(`受信: ${data}`);
-});
-
-eventBus.publish('こんにちは');
 // 受信: こんにちは

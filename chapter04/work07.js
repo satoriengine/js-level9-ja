@@ -13,19 +13,7 @@
 [通知] こんにちは
 */
 
-const chatBus = {
-    subscribers: [],
-    subscribe: function (fn) {
-        // subscribersにfnを追加する
-        this.subscribers.push(fn);
-    },
-    publish: function (message) {
-        // subscribers内の各関数にmessageを渡して呼び出す
-        this.subscribers.forEach(function (fn) {
-            fn(message);
-        });
-    },
-};
+// 以下の部分に処理を作成してください
 
 // 以降の部分は変更してはいけません
 chatBus.subscribe(function (message) {
