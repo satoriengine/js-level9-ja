@@ -15,28 +15,7 @@
 旅行記にコメントしました
 */
 
-const likeableMixin = {
-    like: function () {
-        // "${this.title}にいいねしました" と表示する
-        console.log(`${this.title}にいいねしました`);
-    },
-};
-
-const commentableMixin = {
-    comment: function () {
-        // "${this.title}にコメントしました" と表示する
-        console.log(`${this.title}にコメントしました`);
-    },
-};
-
-class Post {
-    constructor(title) {
-        this.title = title;
-    }
-}
-
-// Post.prototypeにlikeableMixinとcommentableMixinを混ぜ込む
-Object.assign(Post.prototype, likeableMixin, commentableMixin);
+// 以下の部分に処理を作成してください
 
 // 以降の部分は変更してはいけません
 const post = new Post('旅行記');

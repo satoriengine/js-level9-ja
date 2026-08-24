@@ -17,21 +17,7 @@
 80
 */
 
-const speaker = { volume: 50 };
-
-const handler = {
-    set: function (target, propertyName, value) {
-        // 範囲外ならエラーを表示してtrueを返し、それ以外は代入してtrueを返す
-        if (propertyName === 'volume' && (value < 0 || value > 100)) {
-            console.log('エラー：設定できる音量は0〜100です');
-            return true;
-        }
-        target[propertyName] = value;
-        return true;
-    },
-};
-
-const speakerProxy = new Proxy(speaker, handler);
+// 以下の部分に処理を作成してください
 
 // 以降の部分は変更してはいけません
 console.log(speakerProxy.volume);

@@ -13,19 +13,7 @@
 [気象警報] 大雨警報が発表されました
 */
 
-const weatherBus = {
-    subscribers: [],
-    subscribe: function (fn) {
-        // subscribersにfnを追加する
-        this.subscribers.push(fn);
-    },
-    publish: function (alert) {
-        // subscribers内の各関数にalertを渡して呼び出す
-        this.subscribers.forEach(function (fn) {
-            fn(alert);
-        });
-    },
-};
+// 以下の部分に処理を作成してください
 
 // 以降の部分は変更してはいけません
 weatherBus.subscribe(function (alert) {
