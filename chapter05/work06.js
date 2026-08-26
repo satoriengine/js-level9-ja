@@ -20,6 +20,5 @@ const duck = { name: 'カモ' };
 
 // 同じ名前（move）のメソッドを持つミックスインを両方適用すると、
 // 後から適用した方（この場合swimmerMixin）で上書きされる
-Object.assign(duck, flyerMixin, swimmerMixin);
 
-duck.move(); // カモが泳いで移動する（flyerMixinのmoveは上書きされて消えている）
+// カモが泳いで移動する（flyerMixinのmoveは上書きされて消えている）

@@ -29,13 +29,4 @@ class Animal {
 class Duck extends Animal {}
 class FlyingFish extends Animal {}
 
-applyMixins(Duck, [flyerMixin, swimmerMixin]);
-applyMixins(FlyingFish, [flyerMixin]);
-
-const duck = new Duck('カモ');
-duck.fly();
-duck.swim();
-
-const flyingFish = new FlyingFish('トビウオ');
-flyingFish.fly();
 // flyingFish.swim(); // swimは適用していないので呼び出せない

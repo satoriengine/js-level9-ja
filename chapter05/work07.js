@@ -14,24 +14,7 @@
 ペンギンが水中を泳ぐ
 */
 
-const flyerMixin = {
-    fly: function () {
-        // "${this.name}が空を飛ぶ" と表示する
-        console.log(`${this.name}が空を飛ぶ`);
-    },
-};
-
-const swimmerMixin = {
-    swim: function () {
-        // "${this.name}が水中を泳ぐ" と表示する
-        console.log(`${this.name}が水中を泳ぐ`);
-    },
-};
-
-const penguin = { name: 'ペンギン' };
-
-// swimmerMixinだけをpenguinに混ぜ込む
-Object.assign(penguin, swimmerMixin);
+// 以下の部分に処理を作成してください
 
 // 以降の部分は変更してはいけません
 penguin.swim();

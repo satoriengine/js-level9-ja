@@ -15,28 +15,7 @@ JavaScript入門を貸し出しました
 JavaScript入門を返却しました
 */
 
-const borrowableMixin = {
-    borrow: function () {
-        // "${this.title}を貸し出しました" と表示する
-        console.log(`${this.title}を貸し出しました`);
-    },
-};
-
-const returnableMixin = {
-    giveBack: function () {
-        // "${this.title}を返却しました" と表示する
-        console.log(`${this.title}を返却しました`);
-    },
-};
-
-class Book {
-    constructor(title) {
-        this.title = title;
-    }
-}
-
-// Book.prototypeにborrowableMixinとreturnableMixinを混ぜ込む
-Object.assign(Book.prototype, borrowableMixin, returnableMixin);
+// 以下の部分に処理を作成してください
 
 // 以降の部分は変更してはいけません
 const book = new Book('JavaScript入門');
