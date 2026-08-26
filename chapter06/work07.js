@@ -18,35 +18,7 @@
 対応できる担当者がいません
 */
 
-function createSupportHandler(canHandleFn, title) {
-    return {
-        title: title,
-        next: null,
-        canHandle: canHandleFn,
-        handle: function (issue) {
-            // canHandleで判定し、対応できなければnextに渡す
-            if (this.canHandle(issue)) {
-                console.log(`${title}が対応します`);
-                return;
-            }
-            if (this.next) {
-                this.next.handle(issue);
-                return;
-            }
-            console.log('対応できる担当者がいません');
-        },
-    };
-}
-
-const tier1Handler = createSupportHandler(function (issue) {
-    return issue === 'simple';
-}, '一次窓口');
-
-const tier2Handler = createSupportHandler(function (issue) {
-    return issue === 'technical';
-}, '技術チーム');
-
-tier1Handler.next = tier2Handler;
+// 以下の部分に処理を作成してください
 
 // 以降の部分は変更してはいけません
 tier1Handler.handle('simple');

@@ -36,12 +36,9 @@ const managerHandler = {
     },
 };
 
-supervisorHandler.next = managerHandler;
-
 // 主任が対応
-supervisorHandler.handle(5000); // 主任が承認しました
+
 // 主任が対応不可 => 課長が対応
-supervisorHandler.handle(50000); // 課長が承認しました
 
 // 呼び出す側は、常に先頭のsupervisorHandlerにhandleを呼ぶだけでよい
 // 「誰が対応すべきか」は、チェーンの中で自動的に判断される

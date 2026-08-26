@@ -24,9 +24,7 @@ const managerHandler = {
 };
 
 // 主任の次に、課長を連結する
-supervisorHandler.next = managerHandler;
 
 // nextプロパティによって、主任から課長へと、鎖（チェーン）のようにつながった
-console.log(supervisorHandler.next === managerHandler); // true
-console.log(supervisorHandler.next.title); // 課長
+
 // 現時点ではまだ完成形ではない

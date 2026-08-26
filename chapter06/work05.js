@@ -26,14 +26,11 @@ function createHandler(limit, title) {
 }
 
 // 主任ハンドラ
-const supervisorHandler = createHandler(10000, '主任');
+
 // 課長ハンドラ
-const managerHandler = createHandler(100000, '課長');
+
 // 部長ハンドラ
-const directorHandler = createHandler(1000000, '部長');
 
 // 主任 => 課長 => 部長 の順に連結する
-supervisorHandler.next = managerHandler;
-managerHandler.next = directorHandler;
 
-supervisorHandler.handle(500000); // 部長が承認しました
+// 部長が承認しました
